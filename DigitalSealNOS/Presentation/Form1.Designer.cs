@@ -116,6 +116,7 @@
             radBtnSymmetric.TabStop = true;
             radBtnSymmetric.Text = "Simetrična enkripcija/dekripcija";
             radBtnSymmetric.UseVisualStyleBackColor = true;
+            radBtnSymmetric.Checked= true;
             // 
             // radBtnAsymmetric
             // 
