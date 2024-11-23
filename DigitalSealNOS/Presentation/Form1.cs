@@ -44,7 +44,10 @@ namespace DigitalSealNOS
 
         private void btnDecryptFile_Click(object sender, EventArgs e)
         {
+            string inputFilePath = FileDialogCustom.GetFilePath();
+            string outputFilePath = FileDialogCustom.GetFilePath();
 
+            encryptDecryptFiles.DecryptFile(inputFilePath, outputFilePath);
         }
 
         private void btnCalculateMessageSummary_Click(object sender, EventArgs e)
