@@ -8,7 +8,7 @@ namespace DigitalSealNOS.Models
 {
     public static class FilePaths
     {
-        public static string SymmetricKeyPath { get; } = "tajni_kljuc.txt";
+        public static string SecretKeyPath { get; } = "tajni_kljuc.txt";
         public static string PublicKeyPath { get; } = "javni_kljuc.txt";
         public static string PrivateKeyPath { get; } = "privatni_kljuc.txt";
     }

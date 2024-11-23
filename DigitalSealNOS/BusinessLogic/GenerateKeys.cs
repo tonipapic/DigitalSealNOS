@@ -30,7 +30,7 @@ namespace DigitalSealNOS.BusinessLogic
             using (Aes aes = Aes.Create())
             {
                 aes.GenerateKey();
-                File.WriteAllBytes(FilePaths.SymmetricKeyPath, aes.Key);
+                File.WriteAllBytes(FilePaths.SecretKeyPath, aes.Key);
             }
         }
 
@@ -50,7 +50,7 @@ namespace DigitalSealNOS.BusinessLogic
 
         public bool DoKeysExist()
         {
-            return File.Exists(FilePaths.SymmetricKeyPath) || File.Exists(FilePaths.PublicKeyPath) || File.Exists(FilePaths.PrivateKeyPath);
+            return File.Exists(FilePaths.SecretKeyPath) || File.Exists(FilePaths.PublicKeyPath) || File.Exists(FilePaths.PrivateKeyPath);
         }
         public void GenerateAndStoreKeys()
         {

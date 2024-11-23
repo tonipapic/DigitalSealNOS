@@ -12,7 +12,7 @@ namespace DigitalSealNOS.BusinessLogic
     {
         public void EncryptFile(string inputFilePath, string outputFilePath)
         {
-            byte[] key = File.ReadAllBytes(FilePaths.SymmetricKeyPath);
+            byte[] key = File.ReadAllBytes(FilePaths.SecretKeyPath);
             using (Aes aes = Aes.Create())
             {
                 aes.Key = key;
@@ -35,7 +35,7 @@ namespace DigitalSealNOS.BusinessLogic
 
         public void DecryptFile(string inputFilePath, string outputFilePath)
         {
-            byte[] key = File.ReadAllBytes(FilePaths.SymmetricKeyPath);
+            byte[] key = File.ReadAllBytes(FilePaths.SecretKeyPath);
             using (Aes aes = Aes.Create())
             {
                 aes.Key = key;
