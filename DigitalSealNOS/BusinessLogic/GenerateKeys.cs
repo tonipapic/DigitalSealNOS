@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DigitalSealNOS.Models;
+using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
@@ -8,9 +9,7 @@ namespace DigitalSealNOS.BusinessLogic
 {
     public class GenerateKeys
     {
-        private readonly string symmetricKeyPath = "tajni_kljuc.txt";
-        private readonly string publicKeyPath = "javni_kljuc.txt";
-        private readonly string privateKeyPath = "privatni_kljuc.txt";
+     
 
         private void Generate()
         {
@@ -31,7 +30,7 @@ namespace DigitalSealNOS.BusinessLogic
             using (Aes aes = Aes.Create())
             {
                 aes.GenerateKey();
-                File.WriteAllBytes(symmetricKeyPath, aes.Key);
+                File.WriteAllBytes(FilePaths.SymmetricKeyPath, aes.Key);
             }
         }
 
@@ -41,11 +40,11 @@ namespace DigitalSealNOS.BusinessLogic
             {
                 
                 string publicKey = Convert.ToBase64String(rsa.ExportRSAPublicKey());
-                File.WriteAllText(publicKeyPath, publicKey);
+                File.WriteAllText(FilePaths.PublicKeyPath, publicKey);
 
            
                 string privateKey = Convert.ToBase64String(rsa.ExportRSAPrivateKey());
-                File.WriteAllText(privateKeyPath, privateKey);
+                File.WriteAllText(FilePaths.PrivateKeyPath, privateKey);
             }
         }
 
