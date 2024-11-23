@@ -36,6 +36,8 @@
             btnCalculateMessageSummary = new Button();
             btnCheckFileSignature = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            radBtnSymmetric = new RadioButton();
+            radBtnAsymmetric = new RadioButton();
             SuspendLayout();
             // 
             // btnGenerateKeys
@@ -50,7 +52,7 @@
             // 
             // btnEncryptFile
             // 
-            btnEncryptFile.Location = new Point(12, 70);
+            btnEncryptFile.Location = new Point(12, 86);
             btnEncryptFile.Name = "btnEncryptFile";
             btnEncryptFile.Size = new Size(234, 23);
             btnEncryptFile.TabIndex = 0;
@@ -60,7 +62,7 @@
             // 
             // btnDecryptFile
             // 
-            btnDecryptFile.Location = new Point(12, 113);
+            btnDecryptFile.Location = new Point(12, 129);
             btnDecryptFile.Name = "btnDecryptFile";
             btnDecryptFile.Size = new Size(234, 23);
             btnDecryptFile.TabIndex = 0;
@@ -104,11 +106,35 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+            // radBtnSymmetric
+            // 
+            radBtnSymmetric.AutoSize = true;
+            radBtnSymmetric.Location = new Point(16, 56);
+            radBtnSymmetric.Name = "radBtnSymmetric";
+            radBtnSymmetric.Size = new Size(191, 19);
+            radBtnSymmetric.TabIndex = 1;
+            radBtnSymmetric.TabStop = true;
+            radBtnSymmetric.Text = "Simetrična enkripcija/dekripcija";
+            radBtnSymmetric.UseVisualStyleBackColor = true;
+            // 
+            // radBtnAsymmetric
+            // 
+            radBtnAsymmetric.AutoSize = true;
+            radBtnAsymmetric.Location = new Point(213, 56);
+            radBtnAsymmetric.Name = "radBtnAsymmetric";
+            radBtnAsymmetric.Size = new Size(198, 19);
+            radBtnAsymmetric.TabIndex = 1;
+            radBtnAsymmetric.TabStop = true;
+            radBtnAsymmetric.Text = "Asimetrična enkripcija/dekripcija";
+            radBtnAsymmetric.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(radBtnAsymmetric);
+            Controls.Add(radBtnSymmetric);
             Controls.Add(btnCalculateMessageSummary);
             Controls.Add(btnCheckFileSignature);
             Controls.Add(btnSignFile);
@@ -119,6 +145,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -130,5 +157,7 @@
         private Button btnCalculateMessageSummary;
         private Button btnCheckFileSignature;
         private System.Windows.Forms.Timer timer1;
+        private RadioButton radBtnSymmetric;
+        private RadioButton radBtnAsymmetric;
     }
 }

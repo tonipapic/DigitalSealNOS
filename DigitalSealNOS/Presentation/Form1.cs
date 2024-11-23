@@ -46,7 +46,12 @@ namespace DigitalSealNOS
             string inputFilePath = FileDialogCustom.GetFilePath("Odaberi datoteku koju želiš enkriptirati");
             string outputFilePath = FileDialogCustom.GetFilePath("Odaberi datoteku u koju želiš spremiti enkriptirani sadržaj");
             if (!string.IsNullOrEmpty(inputFilePath) && !string.IsNullOrEmpty(outputFilePath))
-                encryptDecryptFiles.EncryptFile(inputFilePath, outputFilePath);
+            { 
+                if(radBtnSymmetric.Checked)
+                    encryptDecryptFiles.EncryptFile(inputFilePath, outputFilePath);
+                if (radBtnAsymmetric.Checked)
+                    encryptDecryptFiles.EncryptFileAsymmetric(inputFilePath, outputFilePath);
+            }
         }
 
 
@@ -56,7 +61,16 @@ namespace DigitalSealNOS
             string inputFilePath = FileDialogCustom.GetFilePath("Odaberi enkriptiranu datoteku koju želiš dekriptirati");
             string outputFilePath = FileDialogCustom.GetFilePath("Odaberi datoteku u koju želiš spremiti dekriptirani sadržaj");
             if (!string.IsNullOrEmpty(inputFilePath) && !string.IsNullOrEmpty(outputFilePath))
-                encryptDecryptFiles.DecryptFile(inputFilePath, outputFilePath);
+            {
+                if (radBtnSymmetric.Checked)
+                {
+                    encryptDecryptFiles.DecryptFile(inputFilePath, outputFilePath);
+                }
+                if (radBtnAsymmetric.Checked)
+                {
+                    encryptDecryptFiles.DecryptFileAsymmetric(inputFilePath, outputFilePath);
+                }
+            }
         }
 
         private void btnCalculateMessageSummary_Click(object sender, EventArgs e)
@@ -91,7 +105,7 @@ namespace DigitalSealNOS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -99,5 +113,7 @@ namespace DigitalSealNOS
             componentsClickabilityFunction.ManageFormButtonsEnablebility(enabled: generateKeys.DoKeysExist());
 
         }
+
+      
     }
 }

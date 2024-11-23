@@ -56,5 +56,28 @@ namespace DigitalSealNOS.BusinessLogic
                 }
             }
         }
+        public void EncryptFileAsymmetric(string inputFilePath, string outputFilePath)
+        {
+            byte[] publicKey = Convert.FromBase64String(File.ReadAllText(FilePaths.PublicKeyPath));
+            using (RSA rsa = RSA.Create())
+            {
+                rsa.ImportRSAPublicKey(publicKey, out _);
+                byte[] data = File.ReadAllBytes(inputFilePath);
+                byte[] encryptedData = rsa.Encrypt(data, RSAEncryptionPadding.OaepSHA256);
+                File.WriteAllBytes(outputFilePath, encryptedData);
+            }
+        }
+
+        public void DecryptFileAsymmetric(string inputFilePath, string outputFilePath)
+        {
+            byte[] privateKey = Convert.FromBase64String(File.ReadAllText(FilePaths.PrivateKeyPath));
+            using (RSA rsa = RSA.Create())
+            {
+                rsa.ImportRSAPrivateKey(privateKey, out _);
+                byte[] encryptedData = File.ReadAllBytes(inputFilePath);
+                byte[] decryptedData = rsa.Decrypt(encryptedData, RSAEncryptionPadding.OaepSHA256);
+                File.WriteAllBytes(outputFilePath, decryptedData);
+            }
+        }
     }
 }
