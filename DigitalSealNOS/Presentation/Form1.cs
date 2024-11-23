@@ -7,6 +7,7 @@ namespace DigitalSealNOS
     {
         private GenerateKeys generateKeys;
         private EncryptDecryptFiles encryptDecryptFiles;
+        private MessageCalculator messageCalculator;
         public Form1()
         {
             InitializeComponent();
@@ -17,6 +18,7 @@ namespace DigitalSealNOS
         {
             generateKeys = new();
             encryptDecryptFiles = new();
+            messageCalculator = new();
         }
 
         private void btnGenerateKeys_Click(object sender, EventArgs e)
@@ -34,25 +36,28 @@ namespace DigitalSealNOS
 
         private void btnEncryptFile_Click(object sender, EventArgs e)
         {
-            string inputFilePath = FileDialogCustom.GetFilePath();
-            string outputFilePath = FileDialogCustom.GetFilePath();
-
-            encryptDecryptFiles.EncryptFile(inputFilePath, outputFilePath);
+            string inputFilePath = FileDialogCustom.GetFilePath("Odaberi datoteku koju želiš enkriptirati");
+            string outputFilePath = FileDialogCustom.GetFilePath("Odaberi datoteku u koju želiš spremiti enkriptirani sadržaj");
+            if(string.IsNullOrEmpty(inputFilePath)&&string.IsNullOrEmpty(outputFilePath))
+                encryptDecryptFiles.EncryptFile(inputFilePath, outputFilePath);
         }
 
         
 
         private void btnDecryptFile_Click(object sender, EventArgs e)
         {
-            string inputFilePath = FileDialogCustom.GetFilePath();
-            string outputFilePath = FileDialogCustom.GetFilePath();
-
-            encryptDecryptFiles.DecryptFile(inputFilePath, outputFilePath);
+            string inputFilePath = FileDialogCustom.GetFilePath("Odaberi enkriptiranu datoteku koju želiš dekriptirati");
+            string outputFilePath = FileDialogCustom.GetFilePath("Odaberi datoteku u koju želiš spremiti dekriptirani sadržaj");
+            if (string.IsNullOrEmpty(inputFilePath) && string.IsNullOrEmpty(outputFilePath))
+                encryptDecryptFiles.DecryptFile(inputFilePath, outputFilePath);
         }
 
         private void btnCalculateMessageSummary_Click(object sender, EventArgs e)
         {
-
+            string inputFilePath = FileDialogCustom.GetFilePath("Odaberi datoteku koju želiš izračunati");
+            string outputFilePath = FileDialogCustom.GetFilePath("Odaberi datoteku u koju želiš spremiti izračunatu vrijednost");
+            if (string.IsNullOrEmpty(inputFilePath) && string.IsNullOrEmpty(outputFilePath))
+                messageCalculator.CalculateMessageSummary(inputFilePath, outputFilePath);
         }
 
         private void btnSignFile_Click(object sender, EventArgs e)
