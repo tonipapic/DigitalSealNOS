@@ -13,11 +13,12 @@ DigitalSeal is a .NET 8 application designed to provide cryptographic functional
 ## Usage
 
 1. **Generate Keys**: Click the "Generate Keys" button to create and store cryptographic keys.
-2. **Encrypt File**: Select a file to encrypt and specify the output file path.
-3. **Decrypt File**: Select an encrypted file to decrypt and specify the output file path.
-4. **Calculate Message Digest**: Select a file to calculate its SHA-256 hash and specify the output file path.
-5. **Sign File**: Select a file to sign and specify the output file path for the signature.
-6. **Verify Signature**: Select a file and its signature to verify the authenticity and integrity of the file.
+2. **Asymmetric/Symmetric selection**: Select option for encryption/decryption
+3. **Encrypt File**: Select a file to encrypt and specify the output file path.
+4. **Decrypt File**: Select an encrypted file to decrypt and specify the output file path.
+5. **Calculate Message Digest**: Select a file to calculate its SHA-256 hash and specify the output file path.
+6. **Sign File**: Select a file to sign and specify the output file path for the signature.
+7. **Verify Signature**: Select a file and its signature to verify the authenticity and integrity of the file.
 
 
 
@@ -36,11 +37,12 @@ DigitalSeal je aplikacija razvijena u .NET 8 koja pruža kriptografske funkciona
 ## Korištenje
 
 1. **Generiranje ključeva**: Kliknite na gumb "Generate Keys" za kreiranje i pohranjivanje kriptografskih ključeva.
-2. **Enkripcija datoteke**: Odaberite datoteku za enkripciju i navedite putanju za izlaznu datoteku.
-3. **Dekripcija datoteke**: Odaberite enkriptiranu datoteku za dekripciju i navedite putanju za izlaznu datoteku.
-4. **Izračunavanje sažetka poruke**: Odaberite datoteku za izračunavanje SHA-256 sažetka i navedite putanju za izlaznu datoteku.
-5. **Potpisivanje datoteke**: Odaberite datoteku za potpisivanje i navedite putanju za izlaznu datoteku potpisa.
-6. **Provjera potpisa**: Odaberite datoteku i njen potpis za provjeru autentičnosti i integriteta datoteke.
+2. **Asimetrični/Simetrični odabir**: Odaberite opciju želite li enkriptirati/dekriptirati s asimetrčnim ili simetričnim algoritmom.
+3. **Enkripcija datoteke**: Odaberite datoteku za enkripciju i navedite putanju za izlaznu datoteku.
+4. **Dekripcija datoteke**: Odaberite enkriptiranu datoteku za dekripciju i navedite putanju za izlaznu datoteku.
+5. **Izračunavanje sažetka poruke**: Odaberite datoteku za izračunavanje SHA-256 sažetka i navedite putanju za izlaznu datoteku.
+6. **Potpisivanje datoteke**: Odaberite datoteku za potpisivanje i navedite putanju za izlaznu datoteku potpisa.
+7. **Provjera potpisa**: Odaberite datoteku i njen potpis za provjeru autentičnosti i integriteta datoteke.
 
    
    
