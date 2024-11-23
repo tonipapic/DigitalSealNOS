@@ -48,6 +48,10 @@ namespace DigitalSealNOS.BusinessLogic
             }
         }
 
+        public bool DoKeysExist()
+        {
+            return File.Exists(FilePaths.SymmetricKeyPath) || File.Exists(FilePaths.PublicKeyPath) || File.Exists(FilePaths.PrivateKeyPath);
+        }
         public void GenerateAndStoreKeys()
         {
             Generate();

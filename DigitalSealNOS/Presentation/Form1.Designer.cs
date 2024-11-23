@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             btnGenerateKeys = new Button();
             btnEncryptFile = new Button();
             btnDecryptFile = new Button();
             btnSignFile = new Button();
             btnCalculateMessageSummary = new Button();
             btnCheckFileSignature = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // btnGenerateKeys
@@ -96,6 +98,12 @@
             btnCheckFileSignature.UseVisualStyleBackColor = true;
             btnCheckFileSignature.Click += btnCheckFileSignature_Click;
             // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -109,6 +117,7 @@
             Controls.Add(btnGenerateKeys);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
@@ -120,5 +129,6 @@
         private Button btnSignFile;
         private Button btnCalculateMessageSummary;
         private Button btnCheckFileSignature;
+        private System.Windows.Forms.Timer timer1;
     }
 }
