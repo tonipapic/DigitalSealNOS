@@ -1,4 +1,5 @@
-# DigitalSeal (for college course NOS - Napredni operacijski sustavi (Advanced operating systems))
+# DigitalSeal 
+Project made for college course NOS - Napredni operacijski sustavi (Advanced operating systems)
 
 DigitalSeal is a .NET 8 application designed to provide cryptographic functionalities including key generation, file encryption/decryption, message digest calculation, and digital signing and signature verification. The application uses modern cryptographic algorithms to ensure the security and integrity of data.
 
@@ -20,7 +21,8 @@ DigitalSeal is a .NET 8 application designed to provide cryptographic functional
 
 
 
-# DigitalSeal (za kolegij NOS - Napredni operacijski sustavi)
+# DigitalSeal 
+Projekt za kolegij NOS - Napredni operacijski sustavi
 
 DigitalSeal je aplikacija razvijena u .NET 8 koja pruža kriptografske funkcionalnosti uključujući generiranje ključeva, enkripciju/dekripciju datoteka, izračunavanje sažetka poruke te digitalno potpisivanje i provjeru potpisa. Aplikacija koristi moderne kriptografske algoritme kako bi osigurala sigurnost i integritet podataka.
 
