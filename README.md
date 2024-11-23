@@ -18,12 +18,28 @@ DigitalSealNOS is a .NET 8 application designed to provide cryptographic functio
 5. **Sign File**: Select a file to sign and specify the output file path for the signature.
 6. **Verify Signature**: Select a file and its signature to verify the authenticity and integrity of the file.
 
-## Requirements
 
-- .NET 8
-- Visual Studio 2022
 
-## Installation
+# DigitalSealNOS
 
-1. Clone the repository:
+DigitalSealNOS je aplikacija razvijena u .NET 8 koja pruža kriptografske funkcionalnosti uključujući generiranje ključeva, enkripciju/dekripciju datoteka, izračunavanje sažetka poruke te digitalno potpisivanje i provjeru potpisa. Aplikacija koristi moderne kriptografske algoritme kako bi osigurala sigurnost i integritet podataka.
+
+## Značajke
+
+- **Generiranje ključeva**: Generiranje i pohranjivanje simetričnih i asimetričnih kriptografskih ključeva.
+- **Enkripcija/Dekripcija datoteka**: Enkripcija i dekripcija datoteka koristeći simetričnu enkripciju (AES).
+- **Izračunavanje sažetka poruke**: Izračunavanje SHA-256 sažetka datoteke.
+- **Digitalno potpisivanje**: Potpisivanje datoteka koristeći RSA i provjera potpisa kako bi se osigurala autentičnost i integritet.
+
+## Korištenje
+
+1. **Generiranje ključeva**: Kliknite na gumb "Generate Keys" za kreiranje i pohranjivanje kriptografskih ključeva.
+2. **Enkripcija datoteke**: Odaberite datoteku za enkripciju i navedite putanju za izlaznu datoteku.
+3. **Dekripcija datoteke**: Odaberite enkriptiranu datoteku za dekripciju i navedite putanju za izlaznu datoteku.
+4. **Izračunavanje sažetka poruke**: Odaberite datoteku za izračunavanje SHA-256 sažetka i navedite putanju za izlaznu datoteku.
+5. **Potpisivanje datoteke**: Odaberite datoteku za potpisivanje i navedite putanju za izlaznu datoteku potpisa.
+6. **Provjera potpisa**: Odaberite datoteku i njen potpis za provjeru autentičnosti i integriteta datoteke.
+
+   
+   
    
