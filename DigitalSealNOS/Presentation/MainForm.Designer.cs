@@ -1,6 +1,6 @@
 ﻿namespace DigitalSealNOS
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -109,6 +109,7 @@
             // radBtnSymmetric
             // 
             radBtnSymmetric.AutoSize = true;
+            radBtnSymmetric.Checked = true;
             radBtnSymmetric.Location = new Point(16, 56);
             radBtnSymmetric.Name = "radBtnSymmetric";
             radBtnSymmetric.Size = new Size(191, 19);
@@ -116,7 +117,6 @@
             radBtnSymmetric.TabStop = true;
             radBtnSymmetric.Text = "Simetrična enkripcija/dekripcija";
             radBtnSymmetric.UseVisualStyleBackColor = true;
-            radBtnSymmetric.Checked= true;
             // 
             // radBtnAsymmetric
             // 
@@ -129,7 +129,7 @@
             radBtnAsymmetric.Text = "Asimetrična enkripcija/dekripcija";
             radBtnAsymmetric.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -142,8 +142,8 @@
             Controls.Add(btnDecryptFile);
             Controls.Add(btnEncryptFile);
             Controls.Add(btnGenerateKeys);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "MainForm";
+            Text = "Digital Seal";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

@@ -3,7 +3,7 @@ using DigitalSealNOS.Presentation.FormComponents;
 
 namespace DigitalSealNOS
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
         private GenerateKeys generateKeys;
         private EncryptDecryptFiles encryptDecryptFiles;
@@ -11,7 +11,7 @@ namespace DigitalSealNOS
         private FileSignature fileSignature;
         private ComponentsClickabilityFunction componentsClickabilityFunction;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             InitClassObjects();

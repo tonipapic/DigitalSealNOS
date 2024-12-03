@@ -16,7 +16,7 @@ namespace DigitalSealNOS.BusinessLogic
                 using (FileStream fsInput = new FileStream(inputFilePath, FileMode.Open))
                 {
                     byte[] hash = sha256.ComputeHash(fsInput);
-                    string hashString = BitConverter.ToString(hash).Replace("-", "").ToLowerInvariant();
+                    string hashString = BitConverter.ToString(hash).Replace("-", "");
                     File.WriteAllText(outputFilePath, hashString);
                 }
             }
